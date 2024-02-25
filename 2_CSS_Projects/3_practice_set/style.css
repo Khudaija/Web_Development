@@ -1,0 +1,54 @@
+#one{
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    color: white;
+}
+.logo{
+    color: #f08804 ;
+}
+
+#navbar{
+    height: 60px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+}
+
+#navbar a{
+    text-decoration: none;
+}
+button{
+    background-color: #f08804;
+}
+
+#rectangle{
+    margin: 10px;
+    padding: 25px;
+    height: 315px;
+    width: 100px;
+    background-color: rgb(49, 49, 49);
+}
+
+.circle{
+    margin: 5px ;
+   height: 100px;
+   width: 100px;
+   border-radius: 50%; 
+}
+#red{
+    background-color: red;
+}
+#yellow{
+    background-color: orange;
+
+}
+#green{
+    background-color: green;
+}
