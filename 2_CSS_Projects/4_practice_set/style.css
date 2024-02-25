@@ -1,0 +1,42 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+#navbar{
+    height: 60px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+}
+#logo{
+    color: #f08804;
+}
+button{
+    background-color: #f08804;
+}
+main{ 
+    height: 600px;
+}
+main div{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    margin: 5px;
+}
+#one{
+    background-color: rgba(225, 0, 0, 0.5);
+}
+#two{
+    background-color: rgba(0, 225, 0, 0.5);
+}
+#three{
+    background-color: rgba(0, 0, 225, 0.5);
+}
+#footer{
+    text-align: center;
+    margin-bottom: 0;
+    height: 20px;
+    background-color: rgb(96, 94, 94);
+}
