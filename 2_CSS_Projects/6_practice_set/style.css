@@ -1,0 +1,35 @@
+
+.navbar{
+    background-color: pink;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    margin: 10px;
+    list-style-type: none;
+    display: inline;
+}
+
+.one{
+    margin: 25px;
+    height: 200px;
+    width: 200px;
+    /* background-color: rgb(165, 165, 255); */
+    border: 2px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.two{
+    height: 100px;
+    width: 100px;
+    /* background-color: rgb(187, 255, 187); */
+    border: 2px solid green;
+}
