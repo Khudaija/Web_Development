@@ -1,0 +1,22 @@
+#contact_info_sec{
+    width: 100%;
+    padding: 10px;
+}
+
+#contact_info_id{
+    width: 700px;
+    height: 700px;
+    float: left;
+    /* margin: 20px;
+    padding: 10px; */
+}
+
+#contact_info_temp{
+    width: 700px;
+    height: 700px;
+    /* float: right; */
+}
+#contact_info_temp_iframe{
+    width: 600px;
+    height: 700px;
+}
