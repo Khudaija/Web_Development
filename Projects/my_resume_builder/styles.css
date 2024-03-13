@@ -1,0 +1,88 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    background-color: #f2f2f2;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.template1 {
+    width: 550px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 10px 0 0 43px;
+    /* width: 550px; Adjust width as needed */
+    height: 700px; /* Adjust height as needed */
+    background-color: white;
+    border: 1px solid #ccc;
+    /* text-align: center; Center content horizontally */
+    /* line-height: 200px; Center content vertically */
+}
+#contact-info{
+    background-color: aqua;
+    padding: 25px;
+}
+#contact{
+    padding: 1px 5px 1px 1px;
+}
+#right_sec{
+    background-color: aqua;
+    height: 678px;
+    width: 245px;
+}
+
+.row {
+    /* display: flex; */
+}
+
+.clm-6 {
+    margin: 2px;
+    flex: 1; 
+    /* Each column takes up half of the row */
+    /* border: 1px solid #ccc; Just for visualization */
+    /* padding: 10px; */
+}
+
+#colorPicker {
+    margin-bottom: 10px;
+    text-align: center;
+    box-shadow: #f2f2f2;
+    
+}
+
+#colorSelect {
+    padding: 5px;
+}
+
+
+button{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+/* Add any custom CSS styles here */
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    background-color: #fff;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    z-index: 1000;
+    text-align: center;
+}
+
+.container {
+    padding-bottom: 60px; /* Adjust as needed to prevent content from being covered by the fixed element */
+}
