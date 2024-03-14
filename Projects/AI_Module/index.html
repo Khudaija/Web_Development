@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="chat-log"></div>
+    <input type="text" id="user-input" placeholder="Type a message...">
+    <button id="send-btn">Send</button>
+
+    <script src="client.js"></script>
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI Example</title>
+</head>
+<body>
+    <div id="generated-text"></div>
+    
+ 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+    
+    <script src="openai.js"></script>
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI Example</title>
+</head>
+<body>
+    <div id="generated-text"></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        // Define your API key and endpoint
+const apiKey = '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'; // Replace with your actual API key
+const apiUrl = 'https://api.openai.com/v1/completions';
+
+// Define your prompt
+const prompt = 'Once upon a time, ';
+
+// Define the request data
+const requestData = {
+    model: 'text-davinci-003',
+    prompt: prompt,
+    max_tokens: 50 // Adjust based on desired response length
+};
+
+// Send a POST request to the OpenAI API
+axios.post(apiUrl, requestData, {
+    headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`
+    }
+})
+.then(response => {
+    // Handle the response
+    const generatedText = response.data.choices[0].text.trim();
+    document.getElementById('generated-text').innerText = generatedText;
+})
+.catch(error => {
+    // Handle errors
+    console.error('Error:', error.message);
+    document.getElementById('generated-text').innerText = 'An error occurred. Please try again later.';
+});
+
+    </script>
+  
+    
+    <script src="openai.js"></script>
+  
+</body>
+</html>
+ -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Chatbot with OpenAI</title>
+    <style>
+        /* Your CSS styles for chat interface */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .chat-box {
+            height: 400px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .message {
+            margin-bottom: 10px;
+        }
+        .user-message {
+            text-align: right;
+            color: #007bff;
+        }
+        .bot-message {
+            text-align: left;
+            color: #28a745;
+        }
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="chat-box" id="chat-box"></div>
+        <div>
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        async function sendMessage() {
+            var userInput = document.getElementById("user-input").value;
+            appendMessage("user", userInput);
+            document.getElementById("user-input").value = ""; // Clear input field
+
+            // Send request to OpenAI API
+            var response = await generateResponse(userInput);
+            appendMessage("bot", response);
+        }
+        async function generateResponse(userInput) {
+    const apiKey = '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';
+    const apiUrl = 'https://api.openai.com/v1/completions';
+    
+    const prompt = `Generate text: ${userInput}`;
+
+    try {
+        const response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${apiKey}`
+            },
+            body: JSON.stringify({
+                model: 'text-davinci-003',
+                prompt: prompt,
+                max_tokens: 50
+            })
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to fetch data from OpenAI API');
+        }
+
+        const data = await response.json();
+
+        if (!data.choices || data.choices.length === 0) {
+            throw new Error('Empty response from OpenAI API');
+        }
+
+        return data.choices[0].text.trim();
+    } catch (error) {
+        console.error('Error:', error.message);
+        return 'Sorry, an error occurred while processing your request.';
+    }
+}
+ -->
+<!-- 
+        // async function generateResponse(userInput) {
+        //     const apiKey = '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';
+        //     const apiUrl = 'https://api.openai.com/v1/completions';
+            
+        //     const prompt = `Generate a professional summary:\n${userInput}`;
+
+        //     try {
+        //         const response = await fetch(apiUrl, {
+        //             method: 'POST',
+        //             headers: {
+        //                 'Content-Type': 'application/json',
+        //                 'Authorization': `Bearer ${apiKey}`
+        //             },
+        //             body: JSON.stringify({
+        //                 model: 'text-davinci-003',
+        //                 prompt: prompt,
+        //                 max_tokens: 150
+        //             })
+        //         });
+
+        //         if (!response.ok) {
+        //             throw new Error('Failed to fetch data from OpenAI API');
+        //         }
+
+        //         const data = await response.json();
+
+        //         if (!data.choices || data.choices.length === 0) {
+        //             throw new Error('Empty response from OpenAI API');
+        //         }
+
+        //         return data.choices[0].text.trim();
+        //     } catch (error) {
+        //         console.error('Error:', error.message);
+        //         return 'Sorry, an error occurred while processing your request.';
+        //     }
+        // }
+
+        function appendMessage(sender, message) {
+            var chatBox = document.getElementById("chat-box");
+            var messageElement = document.createElement("div");
+            messageElement.classList.add("message");
+
+            if (sender === "user") {
+                messageElement.classList.add("user-message");
+            } else {
+                messageElement.classList.add("bot-message");
+            }
+
+            messageElement.textContent = message;
+            chatBox.appendChild(messageElement);
+
+            // Scroll to bottom of chat box
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    </script>
+</body>
+</html>
+
+
+
+ -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Chatbot with OpenAI</title>
+    CSS styles
+    <style>
+        /* Your CSS styles for chat interface */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="chat-box" id="chat-box"></div>
+        <div>
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    JavaScript code 
+    <script>
+        async function sendMessage() {
+            var userInput = document.getElementById("user-input").value;
+            appendMessage("user", userInput);
+            document.getElementById("user-input").value = ""; // Clear input field
+
+            // Send request to OpenAI API
+            var response = await generateResponse(userInput);
+            appendMessage("bot", response);
+        }
+
+        async function generateResponse(userInput) {
+            // Replace 'YOUR_API_KEY' with your actual OpenAI API key
+            const apiKey = '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';
+            const apiUrl = 'https://api.openai.com/v1/completions';
+            
+            // Format input prompt
+            const prompt = `Generate a professional summary:\n${userInput}`;
+
+            // Send request to OpenAI API
+            const response = await fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${apiKey}`
+                },
+                body: JSON.stringify({
+                    model: 'text-davinci-003', // Choose the appropriate GPT model
+                    prompt: prompt,
+                    max_tokens: 150 // Adjust based on desired response length
+                })
+            });
+
+            // Parse and return response
+            const data = await response.json();
+            return data.choices[0].text.trim();
+        }
+
+        function appendMessage(sender, message) {
+            // Your code to append message to chat box
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Chatbot</title>
+    <style>
+        /* CSS styles for chat interface */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .chat-box {
+            height: 400px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .message {
+            margin-bottom: 10px;
+        }
+        .user-message {
+            text-align: right;
+            color: #007bff;
+        }
+        .bot-message {
+            text-align: left;
+            color: #28a745;
+        }
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="chat-box" id="chat-box"></div>
+        <div>
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript code for chatbot functionality
+        function sendMessage() {
+            var userInput = document.getElementById("user-input").value;
+            appendMessage("user", userInput);
+            document.getElementById("user-input").value = ""; // Clear input field
+
+            // Simulate bot response (replace with actual logic)
+            var botResponse = generateBotResponse(userInput);
+            setTimeout(function() {
+                appendMessage("bot", botResponse);
+            }, 500);
+        }
+
+        function appendMessage(sender, message) {
+            var chatBox = document.getElementById("chat-box");
+            var messageElement = document.createElement("div");
+            messageElement.classList.add("message");
+
+            if (sender === "user") {
+                messageElement.classList.add("user-message");
+            } else {
+                messageElement.classList.add("bot-message");
+            }
+
+            messageElement.textContent = message;
+            chatBox.appendChild(messageElement);
+
+            // Scroll to bottom of chat box
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function generateBotResponse(userInput) {
+            // Replace with actual recommendation logic or predefined responses
+            return "Thank you for your message: " + userInput;
+        }
+    </script>
+</body>
+</html> -->
