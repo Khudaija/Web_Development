@@ -1,0 +1,17 @@
+
+
+div:first-child{
+    background-color: yellow;
+    color: red;
+    border: 5px solid blue;
+}
+
+div{
+
+    margin: 15px;
+    padding: 5px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    border: 5px solid yellow;
+}
