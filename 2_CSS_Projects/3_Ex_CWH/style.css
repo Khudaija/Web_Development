@@ -1,0 +1,53 @@
+body{
+    background-color: rgb(238, 237, 237);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#card{
+    margin: 50px;
+    width: 400px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 3px 3px #cccccc;
+}
+
+#images{
+    display: flex;
+    justify-content: center;
+}
+
+#images img{
+    margin-top: 15px;
+    border-radius: 18px;
+    width: 355px;
+}
+
+#capsule p{
+    padding: 5px 5px 3px 25px;
+    display: inline-block;
+    color: rgb(119, 119, 119);
+}
+
+#content{
+    padding: 3px 5px 5px 15px;
+}
+
+#content p{
+    color: gray;
+}
+
+#button{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#button button{
+    width: 110px;
+    padding: 10px;
+    border-radius: 100px;
+    border: none;
+    background-color: #92c1ff;
+    color: rgb(0, 102, 255);
+}
