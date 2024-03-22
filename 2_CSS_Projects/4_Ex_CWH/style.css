@@ -1,0 +1,42 @@
+:root{
+    --blue: #50c4f6;
+    --white: #FFFFFF;
+    --black: #000000;
+    --pink: rgb(255, 0, 187);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#navbar{
+    margin-top: 0;
+    
+    height: 45px;
+    width: 100%;
+    background-color: var(--black);
+}
+
+#nav_div{
+
+}
+
+#nav_ul{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+#nav_ul li{
+    color: var(--blue);
+    list-style-type: none;
+}
+
+#nav_ul li:hover{
+    color: var(--pink);
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 5px;
+    
+}
